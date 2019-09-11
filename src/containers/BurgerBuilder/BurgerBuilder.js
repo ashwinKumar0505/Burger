@@ -19,7 +19,8 @@ import { addingTheIngredient, removingTheIngredient,getTheIngredients } from '..
 class BurgerBuilder extends Component{
    
    componentDidMount(){
-        this.props.onIngredientLoaded();
+    console.log("mounting")
+    this.props.onIngredientLoaded();
    }  
    state={
      totalPrice:4,
@@ -56,6 +57,8 @@ class BurgerBuilder extends Component{
       for(let key in disabledInfo){
         disabledInfo[key]=disabledInfo[key]<=0;
       }
+      console.log(this.props.ingredientsLoaded)
+      console.log(this.props.ings)
      return(
        <Aux>
          {this.props.ingredientsLoaded ? 

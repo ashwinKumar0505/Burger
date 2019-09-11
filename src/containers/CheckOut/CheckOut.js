@@ -27,6 +27,7 @@ class CheckOut extends Component {
     this.props.history.replace('/checkout/contact-data')
   }
   render() {
+    console.log(this.props.ings)
     return (
       <div>
         <CheckOutSummary ingredients={this.props.ings} cancelOrder={this.cancelOrder} continueOrder={this.continueOrder}/>
@@ -41,9 +42,9 @@ class CheckOut extends Component {
 
 const mapStateToProps=state=>{
         return {
-              ings:state.ingredients,
-              totalPrice:state.totalPrice
-        }
+             ings:state.burgBuilder.ingredients,
+              totalPrice:state.burgBuilder.totalPrice
+              }
 }
 
 export default connect(mapStateToProps)(CheckOut);
