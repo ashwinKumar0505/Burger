@@ -2,7 +2,6 @@ import React from "react"
 import BurgIng from "./BurgerIngrediants/BurgerIngrediants"
 import classes from "./burger.module.css";
 const Burger=(props)=>{
-    console.log(props.ingredient)
     let newBurger=Object.keys(props.ingredient)
     .map( (igKey) =>{
       return [...Array(props.ingredient[igKey])].map(( _ , index)=>{

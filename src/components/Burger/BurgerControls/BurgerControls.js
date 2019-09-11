@@ -9,8 +9,7 @@ const controls=[
   {Label:"Cheese" , Type:"cheese"}
 ]
 const BurgerControls=(props)=>
-  console.log(props.totalPrice)
- || (  
+  (  
    <div className={classes.BurgerControls}>
      <h3>price : ${props.totalPrice}</h3>
    {controls.map((ctrl)=>

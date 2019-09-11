@@ -2,7 +2,6 @@ import React from 'react';
 import classes from "./Input.module.css"
 const Input=(props)=>{
   let inputElement=null;
-  console.log(props)
   switch(props.elementType){
     case ("input"):
       inputElement=<input className={classes.InputElement} value={props.value}{...props.elementConfig} onChange={props.changeHandler}/>
@@ -11,7 +10,6 @@ const Input=(props)=>{
       inputElement=<input className={classes.InputElement} {...props.elementConfig} onChange={props.changeHandler}/>
       break;
     case ("select"):
-      console.log(props.value)
       inputElement=(
         <select className={classes.InputElement} value={props.value} onChange={props.changeHandler}>
         {props.elementConfig.options.map((option)=>{

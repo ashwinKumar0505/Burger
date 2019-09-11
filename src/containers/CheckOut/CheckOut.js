@@ -27,7 +27,6 @@ class CheckOut extends Component {
     this.props.history.replace('/checkout/contact-data')
   }
   render() {
-    console.log(this.props.match.path + "/contact-data")
     return (
       <div>
         <CheckOutSummary ingredients={this.props.ings} cancelOrder={this.cancelOrder} continueOrder={this.continueOrder}/>

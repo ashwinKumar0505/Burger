@@ -13,7 +13,6 @@ class Layout extends Component{
     })
   }
   changeToToolBar=()=>{
-    console.log("here")
     this.setState({
       openSideDrawer:false
     })
